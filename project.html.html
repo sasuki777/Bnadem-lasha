@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List | Bنادم Lasha</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: white;
+        }
+
+        .todo-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 35px;
+            background: #101010;
+            border: 1px solid #292929;
+            border-radius: 25px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #00e5ff;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+
+        #taskInput {
+            flex: 1;
+            padding: 15px;
+            background: #181818;
+            border: 1px solid #333;
+            border-radius: 12px;
+            color: white;
+            outline: none;
+        }
+
+        #addTask {
+            padding: 15px 22px;
+            border: none;
+            border-radius: 12px;
+            background: #00e5ff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #taskList {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #181818;
+            border: 1px solid #292929;
+            border-radius: 12px;
+        }
+
+        .task span {
+            cursor: pointer;
+        }
+
+        .task.completed span {
+            text-decoration: line-through;
+            color: #555;
+        }
+
+        .delete {
+            border: none;
+            background: transparent;
+            color: #ff5c5c;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        @media (max-width: 500px) {
+            .input-area {
+                flex-direction: column;
+            }
+
+            #addTask {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <a href="index.html" class="back">
+            ← Back to Portfolio
+        </a>
+
+        <h1>My To-Do List</h1>
+
+        <p class="description">
+            Add your tasks, complete them and remove them.
+        </p>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Write a task..."
+            >
+
+            <button id="addTask">
+                Add Task
+            </button>
+
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script src="project.js"></script>
+
+</body>
+</html>
